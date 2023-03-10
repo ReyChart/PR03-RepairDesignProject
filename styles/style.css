@@ -23,6 +23,11 @@ body {
     --text-btn-color: #E3B873;
 }
 
+.container {
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
 /* BUTTON settings */
 
 .button {
@@ -107,4 +112,53 @@ body {
 
 .button-header:hover {
     transform: scale(1.1);
+}
+
+/* section MAIN-SCREEN settings */
+
+.main-screen {
+    background: linear-gradient(rgba(0, 0, 0, .7), rgba(0, 0, 0, .7)), url(../pictures/main_image.jpg) center / cover no-repeat;
+    height: 707px;
+}
+
+.main-screen__wrapper {
+    padding-top: 194px;
+}
+
+.main-screen__title {
+    max-width: 676px;
+    font-family: 'Yeseva One', 'Arial', cursive;
+    font-size: 2.5rem;
+    color: var(--light-color);
+    line-height: 53px;
+    text-transform: uppercase;
+    margin-bottom: 19px;
+}
+
+.main-screen__title_color {
+    color: var(--text-btn-color);
+}
+
+.main-screen__text {
+    max-width: 520px;
+    font-size: 1.375rem;
+    color: var(--light-color);
+    line-height: 36px;
+    margin-bottom: 40px;
+}
+
+.main-screen__btn {
+    display: flex;
+    gap: 20px;
+}
+
+.button-mainscreen {
+    padding: 20px 0;
+    width: 207px;
+}
+
+.button-mainscreen-disabled {
+    background-color: transparent;
+    box-shadow: none;
+    border: 1px solid var(--light-color);
 }
