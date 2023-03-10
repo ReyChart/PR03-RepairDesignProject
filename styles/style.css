@@ -264,7 +264,7 @@ body {
     text-transform: uppercase;
     text-decoration: none;
     cursor: pointer;
-    transition: color .2s linear;
+    transition: color .2s linear, border-bottom .2s linear;
 }
 
 .projects__link:hover {
