@@ -273,5 +273,9 @@ body {
     border-bottom: 1px solid var(--text-btn-color);
 }
 
+.projects__image {
+    display: block;
+}
+
 
 
