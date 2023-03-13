@@ -19,8 +19,14 @@ body {
 :root {
     --light-color: #FFFFFF;
     --dark-color: #131313;
+    --dark-color2: #181818;
     --text-btn-color: #E3B873;
+    --btn-hover-color: #E3B873CC;
     --text-itm-color: rgba(255, 255, 255, 0.3);
+    --blackform-label: rgba(255, 255, 255, 0.5);
+    --whiteform-label: rgba(54, 54, 54, 0.5);
+    --blackform-border: rgba(255, 255, 255, 0.15);
+    --whiteform-border: rgba(54, 54, 54, 0.3);
 }
 
 .container {
@@ -43,6 +49,66 @@ body {
     border-radius: 2px;
     box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
     cursor: pointer;
+}
+
+/* FORM settings */
+
+.input {
+    width: 231px;
+    padding: 5px 0px 5px;
+    border: 0;
+    outline: 0;
+    border-bottom: 1px solid var(--blackform-border);
+    background-color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+.input::placeholder {
+    color: #363636;
+}
+
+.label {
+    display: block;
+    font-size: 13px;
+    line-height: 21px;
+    color: var(--blackform-label);
+}
+
+.form__label-checkbox {
+    display: flex;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.form__input-checkbox{
+    display: none;
+}
+
+.form__fake-checkbox{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    background: var(--text-btn-color);
+    color: var(--light-color);
+    margin-right: 9px;
+}
+
+.form__fake-checkbox::before{
+    content:"\2714";
+    opacity: 1;
+    transition: .2s;
+}
+
+.form__input-checkbox:checked+.form__fake-checkbox::before{
+    opacity: 0;
+}
+
+.form__text-checkbox {
+    color: var(--dark-color2);
+    align-self: flex-end;
 }
 
 /* HEADER settings */
@@ -155,6 +221,7 @@ body {
 .button-mainscreen {
     padding: 20px 0;
     width: 207px;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.3);
 }
 
 .button-mainscreen-disabled {
@@ -275,6 +342,136 @@ body {
 
 .projects__image {
     display: block;
+}
+
+/* section VIDEO settings */
+
+.video__wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: -298px;
+}
+
+.video__title {
+    font-family: 'Yeseva One', 'Arial', cursive;
+    font-size: 1.25rem;
+    color: var(--light-color);
+    line-height: 28px;
+    text-transform: uppercase;
+    margin-bottom: 13px;
+}
+
+.video__icon {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 31px;
+}
+
+.video__icon-line {
+    display: block;
+    width: 32px;
+    height: 2px;
+    background-color: var(--text-btn-color);
+    border-radius: 30px;
+}
+
+.video__icon-img {
+    width: 33px;
+    height: 28px;
+}
+
+.video__image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)), url(../pictures/video_image.png) no-repeat center;
+    width: 817px;
+    height: 434px;
+}
+
+.video-button {
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+    box-shadow: 0px 5px 30px rgba(227, 184, 115, 0.2);
+    position: relative;
+    transition: background-color .3s linear;
+}
+
+.video-button:hover {
+    background-color: var(--btn-hover-color);
+}
+
+.button__icon-arrow {
+    position: absolute;
+    top: 50%;
+    left: 55%;
+    transform: translate(-55%, -50%);
+}
+
+.video__text {
+    max-width: 681px;
+    font-size: 1.125rem;
+    line-height: 37px;
+    text-align: center;
+    margin-bottom: 92px;
+}
+
+.video__text::before {
+    content: "";
+    display: block;
+    width: 55px;
+    height: 2px;
+    background-color: var(--text-btn-color);
+    border-radius: 30px;
+    margin: 63px auto 35px;
+}
+
+.video__form-wrapper {
+    margin-bottom: 148px;
+}
+
+.video__form-inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 33px;
+}
+
+.video__form-item {
+    display: flex;
+    flex-direction: column;
+}
+
+.video__form-item:first-of-type {
+    margin-right: 58px;
+}
+
+.video__form-item:last-of-type {
+    margin-right: 49px;
+}
+
+.video__form-label {
+    color: var(--whiteform-label);
+}
+
+.video__form-input {
+    border-color: var(--whiteform-border);
+}
+
+.form-button {
+    padding: 20px 0px;
+    width: 200px;
+    font-style: normal;
+    font-size: 13px;
+    box-shadow: 0px 15px 15px rgba(227, 184, 115, 0.15);
+    transition: background-color .3s linear;
+}
+
+.form-button:hover {
+    background-color: var(--btn-hover-color);
 }
 
 
